@@ -87,8 +87,13 @@
                     </table>
                     
 <div class="pricing-footer bg-success text-white">
+<!-- <p class="text-right" style="font-size: 25"> Lira rate: <input type="number" name="lirarate" value=""   style="width:150px" ></p> -->
+
     <p style="font-size: 25"> Quantity :   {{ Cart::count(); }}</p>
-    <p style="font-size: 25"> Total Price :   {{ Cart::subtotal(); }}</p>
+    <p style="font-size: 25"> Total  :   {{ Cart::subtotal() }}
+<!-- <p class="text-center" style="font-size: 25"> Total Price : {{ Cart::subtotal() * Cart::count();}}  </p> -->
+
+
 
 </div>
                 </div>

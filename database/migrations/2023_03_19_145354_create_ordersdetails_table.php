@@ -18,8 +18,8 @@ return new class extends Migration
             $table->bigInteger('order_id')->unsigned();
             $table->bigInteger('items_id')->unsigned();
             $table->integer('quantity');
-            $table->integer('price');
-            $table->integer('totalprice');
+            $table->string('price');
+            $table->string('totalprice');
 
             $table->timestamps();
 

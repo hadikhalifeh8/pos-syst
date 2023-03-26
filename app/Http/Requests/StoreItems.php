@@ -27,8 +27,8 @@ class StoreItems extends FormRequest
             'name' =>'required|unique:items,name,'.$this->id,
             'category' =>'required',
             'price' =>'required',
-            //'photo'=>'required_without:id',
-            'photo.*'=>'image|mimes:jpg,jpeg,png,svg'
+            'photo'=>'required_without:id',
+            'photo'=>'image|mimes:jpg,jpeg,png,svg'
 
         ];
     }
@@ -42,7 +42,7 @@ class StoreItems extends FormRequest
             'category.required' => 'please select the category',
             'price.required' => 'please Enter the price',
 
-           // 'photo.required_without'=>'please Enter an image',
+            'photo.required_without'=>'please Enter an image',
             'image' => 'Enter image only',
             'mimes'=>'image type should jpeg,jpg,png,svg only',
         ];

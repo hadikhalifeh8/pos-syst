@@ -92,28 +92,32 @@ class ItemsController extends Controller
      */
     public function update(StoreItems $request)
     {
-        $items = itemsModel::findOrFail( $request->id);
 
-        if($request->hasfile('photo'))
-        {
-         $file = $request->file('photo')  ;
-            
-    $name = $file->getClientOriginalName();
-    $file->storeAs('attachments/items/', $file->getClientOriginalName(),'upload_attachments');
+        $items = itemsModel::findOrFail($request->id);
 
-
-  
-            
-            $items->category_id = $request->category;
-            $items->name = $request->name; 
-            $items->image = $name;
+         $items->category_id = $request->category;
+           $items->name = $request->name; 
+          // $items->image = $name;
             $items->price = $request->price;
-        
-            $items->save();
-    
+           
+            if($request->hasfile('photo'))
+            { 
+             $file = $request->file('photo');
+                
+        $name = $file->getClientOriginalName();
+        $file->storeAs('attachments/items/', $file->getClientOriginalName(),'upload_attachments');
+              
+           $items->update([     
+                 'image'=> $name,     
+               ]);  
+        }
+        $items->save();
+                
+            
             toastr()->success('Items Data Updated Successfully');
             return redirect()->route('items.index'); 
-        }
+           
+
     }
 
     /**

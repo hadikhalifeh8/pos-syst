@@ -25,19 +25,21 @@ use Illuminate\Auth\Middleware\EnsureEmailIsVerified;
 |
 */
 Route::get('/', function () {
-    return view('Auth.login');
+    return view('Pages.homepage');
 });
 
 
 //for admin
 
-Route::middleware(['auth','verified','authadmin'])->group(function(){
+ Route::middleware(['auth','verified','authadmin'])->group(function(){
     Route::resource('categories', CategoriesController::class);
     Route::resource('items', ItemsController::class);
     
     
     Route::get('index',[orderdate::class,'index']);
     Route::get('gettodayorder',[orderdate::class,'get_today_order']);
+    // Route::get('homes',[orderdate::class,'homepage']);
+
     });
     
     

@@ -17,6 +17,7 @@ class AuthAdmin
      */
     public function handle(Request $request, Closure $next)
     {
+        // echo "test".Auth::user()->utype;
        
             if(Auth::user()->utype ==='ADM')
             {

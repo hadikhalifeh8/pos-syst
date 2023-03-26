@@ -5,7 +5,7 @@
 <!-- Mirrored from coderthemes.com/moltran/layouts/green-vertical/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Apr 2022 11:29:39 GMT -->
 <head>
         <meta charset="utf-8" />
-        <title>Dashboard | Moltran - Responsive Bootstrap 4 Admin Dashboard</title>
+        <title>Chocco Caffee</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="Responsive bootstrap 4 admin template" name="description" />
         <meta content="Coderthemes" name="author" />
@@ -261,7 +261,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-12">
-                                2016 - 2020 &copy; Moltran theme by <a href="#">Coderthemes</a>
+                                2023 -  &copy; Chocco <a href="#">Caffee </a>
                             </div>
                         </div>
                     </div>

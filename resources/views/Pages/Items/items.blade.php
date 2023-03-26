@@ -86,9 +86,9 @@
             </div>
             <div class="modal-body">
                 <!-- edit_form -->
-                <form action="{{route('items.update', 'test')}}" method="Post"  enctype="multipart/form-data">
+                <form action="{{route('items.update', 'test')}}" method="POST"  enctype="multipart/form-data">
                 {{ method_field('patch') }}
-                {{ csrf_field() }}
+                @csrf
                     <div class="row">
 
                         <input id="id" type="hidden" name="id" class="form-control"
@@ -122,7 +122,7 @@
                         <div class="row">
                         <div class="col">
                         <label for="Name" class="mr-sm-2">  Price :</label>
-                            <input id="Name" type="number" min="1.00" step="1.00" name="price" class="form-control" value="{{$v_items->price}}">
+                            <input id="Name" type="number"  step="0.01" name="price" class="form-control" value="{{$v_items->price}}">
                         </div>
                         </div>
 
@@ -133,7 +133,7 @@
                             <div class="col-md-3">
                               <div class="form-group">
                                   <label for="academic_year">Photo: <span class="text-danger">*</span></label>
-                                  <input type="file" accept="image/*" name="photo"> <br>
+                                  <input type="file" accept="image" name="photo"> <br>
                                   <img src=  "attachments/items/{{$v_items->image}}" width= "50px"  height="50px" alt="Image"   height="70px"  width="70px" />
                               </div>
                           </div>
@@ -252,16 +252,16 @@
                         <div class="col">
                             <label for="Name" class="mr-sm-2">
                                 Price :</label>
-                            <input id="Name" type="number" min="1.00" step="1.00" name="price" class="form-control">
+                            <input id="Name" type="number"  step="0.1" name="price" class="form-control">
                         </div>
                     </div>
 
                     <br>
 
                     <div class="col-md-3">
-                        <div class="form-group">
+                        <div class="form-group"> 
                             <label for="academic_year">Photo: <span class="text-danger">*</span></label>
-                            <input type="file" accept="image/*" name="photo" >
+                            <input type="file" accept="image" name="photo" >
                         </div>
                     </div>
 

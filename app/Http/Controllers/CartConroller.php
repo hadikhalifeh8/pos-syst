@@ -70,12 +70,14 @@ class CartConroller extends Controller
 // ==> order pages
     public function addinvoice(Request $request)
     { 
-     
+    //   $lirarate = $request->lirarate;
+    //   return $lirarate;
         
-       $order = OrdersModel::all();
-         $content = Cart::content();
-         return view('Pages.Orders.orders',compact('content','order'));
+        $order = OrdersModel::all();
+        $content = Cart::content();
+        return view('Pages.Orders.orders',compact('content','order','lirarate'));
         
+
          //  echo "<pre>";
         //  print_r($content); 
          // return redirect()->route('Orders.orders.index',compact('content'));

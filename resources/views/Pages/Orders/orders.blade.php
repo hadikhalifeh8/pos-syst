@@ -17,11 +17,11 @@
                                                 <h4 class="text-right"><img src="assets/images/logo-dark.png" height="18" alt="moltran"></h4>
 
                                             </div>
-                                            <!-- <div class="float-right">
-                                                <h5>Invoice # <br>
-                                                            <strong>2015-04-23654789</strong>
+                                            <div class="float-right">
+                                                <h5>Lira rate:{{$lirarate}} <br>
+                                                            <strong>Price: 2565</strong>
                                                         </h5>
-                                            </div> -->
+                                            </div>
                                         </div>
                                         <hr>
                                         <div class="row">
